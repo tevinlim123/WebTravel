@@ -1,0 +1,723 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<style>
+body{
+ height: 100vh;
+ margin: 0; 
+ padding: 0px 0px 0px 0px;
+ background-color:#d6e0f5;
+}
+i.glyphicon.glyphicon-search{
+  font-size: 20px;
+  color: rgb(184,182,182);
+}
+
+#background{
+  margin-top:-120px;
+  background:url(/Image/view.jpg) no-repeat;
+  background-size:cover;
+  padding-top:111px;
+  height:638px;
+  max-height:1112px;
+  width:100%;
+}
+
+#background .jumbotron{
+  background:none;
+  margin-left:137px;
+  max-width:1000px;
+  margin-top:22px;
+}
+
+#background .jumbotron h1{
+  font-family:nexa;
+  color:white;
+  margin-bottom:-12px;
+}
+
+#background .jumbotron p{
+  font-family:raleway;
+  color:white;
+  margin-bottom:-12px;
+  margin-top:27px;
+  padding-right:307px;
+}
+
+#home{
+  text-align: center;
+}
+
+#home .container h1{
+  margin:36px;
+}
+
+#home .container .row{
+  margin:-3px;
+}
+
+#home .isi .container.atas{
+  background-color:#f9f8f8;
+  margin-top:-85px;
+  padding-bottom:37px;
+}
+
+.glyphicon{
+  position: relative;
+  font-size: 42px;
+  color: #27475e;
+}
+
+.container.bawah{
+  text-align: center;
+}
+
+#news{
+  margin-top: 31px;
+  padding-top: 43px;
+  padding-bottom: 25px;
+}
+
+#gallery .container h1{
+  text-align: center;
+  font-family: raleway;
+  margin-bottom: 38px;
+}
+
+#gallery .container .row #dua.col-lg-6.col-md-6.col-sm-6.col-xs-6{
+  padding-top:31px;
+}
+
+#about{
+  background-color: #102128;
+  margin-top: 79px;
+  color: white;
+}
+
+#about .container{
+  width: 100%;
+  padding: 55px;
+}
+
+#about .container.footer .col-lg-6.col-md-6.col-sm-12.col-xs-12{
+  font-family:petitamedium;
+  color:#eee;
+}
+
+.input-group.input-group-lg{
+  margin-top:23px;
+}
+
+#icon{
+  color:white;
+  font-size:37px;
+  margin-top:20px;
+  position:static;
+}
+
+#icon i.fa.fa-facebook-official{
+  margin-left:17px;
+}
+
+#icon i.fa.fa-twitter-square{
+  margin-left:17px;
+}
+
+#icon i.fa.fa-youtube-play{
+  margin-left:17px;
+}
+
+#kaki{
+  color: rgb(40,78,94);
+  background-color: #0f1517;
+}
+    .input-group {
+        display:flex;
+    }
+
+    #container2{
+        display:none
+    }
+    #label1{
+        font-family: Georgia, serif;font-size: 30px;color: blue;
+    }
+    #myBtn2 {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: #24a0ed; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
+
+#myBtn2:hover {
+  background-color: #0073e6; /* Add a dark-grey background on hover */
+}
+#more, #more2, #more3, #more4, #more5 , #more6, #more7, #more8 {display: none;}
+</style>
+<link href="~/Content/StyleSheet1.css" rel="stylesheet">
+<!-- navbar -->
+<!-- jumbotron -->
+<body>
+    <div id="background">
+        <div class="jumbotron">
+            <h3 style="color:white">Liburan yuk! Bersama TOPHOLIDAY dengan fasilitas terlengkap.</h3>
+            <h1>INDONESIA</h1>
+            <p><a href="#" class="btn btn-default" role="button">EXPLORE</a></p>
+        </div>
+    </div>
+    <!-- jumbotron -->
+    <!-- container atas -->
+    <div id="home">
+        <div class="isi">
+            <div class="container atas" style="padding-right: 155px;padding-left: 155px;border-bottom-style: double;border-top-style: groove;">
+                <h1>Our Services</h1>
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                        <img src="/Image/individual.png" width="120px">
+                        <h3>Customized Holiday</h3>
+                        <p class="text-justify"><strong>TopHoliday</strong> offers customized holidays both for individual travelers or groups where clients can custom made the trips based on their needs.</p>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                        <img src="/Image/visa.png" width="120px">
+                        <h3>Travel Document Arrangements</h3>
+                        <p class="text-justify"><strong>TopHoliday</strong> offers any arrangement for its clients to obtain and renew passports and help the process of applying visa(s).</p>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                        <img src="/Image/grup.png" width="120px">
+                        <h3>Group Incentives</h3>
+                        <p class="text-justify"><strong>TopHoliday</strong> is able to handle any corporate incentives or group tours of any request from corporate or industry organizations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- container atas -->
+    <!-- container news -->
+    <div id="news">
+        <div class="container"  style="padding-right: 155px;padding-left: 155px;">
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                    <div class="thumbnail" style="color:gray">
+                        <img src="/Image/bali.jpg" id="image-preview8" style="height:207px">
+                        <div class="caption">
+                            <h3 id="label1">
+                                <span style="text-shadow: 2px 2px 4px dodgerblue;">Bali</span> <i style="color:#24a0ed;font-size:16px" class="far fa-thumbs-up"></i>
+                            </h3>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <p class="text-justify">Pulau Bali adalah salah satu pulau dari 17.000 lebih kepulauan yang ada di Indonesia. Dengan luas pulau sepanjang 153 km dan selebar 112 km dan luas pulau 123,98 km2<span id="dots">...</span><span id="more">, Luas pulau ini setengah dari luas provinsi jawa timur dan sekitar 3,2 km dari ketapang bagian timur pulau Jawa. Mayoritas penduduk Bali adalah pemeluk agama Hindu. Di dunia, Bali terkenal sebagai tujuan pariwisata dengan keunikan berbagai hasil seni-budayanya, khususnya bagi para wisatawan Jepang dan Australia. Bali juga dikenal dengan julukan Pulau Dewata dan Pulau Seribu Pura.</span> @*Luas pulau ini setengah dari luas provinsi jawa timur dan sekitar 3,2 km dari ketapang bagian timur pulau Jawa.*@</p>
+                            <button class="btn btn-primary" id="btn" value="tes" type="button">READ MORE</button>
+                            <a class="btn btn-danger" id="btn" href="@Url.Action("data2","WebTravel")" type="button">View</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                    <div class="thumbnail">
+                        <img src="/Image/medan.jpg"  id="image-preview7" style="height:207px;width:100%">
+                        <div class="caption">
+                            <h3 id="label1">
+                                <span style="text-shadow: 2px 2px 4px dodgerblue;">Medan</span> <i style="color:#24a0ed;font-size:16px" class="far fa-thumbs-up"></i>
+                            </h3>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <p class="text-justify">Kota Medan adalah ibu kota provinsi Sumatra Utara, Indonesia. Kota ini merupakan kota terbesar ketiga di Indonesia setelah Jakarta dan Surabaya, serta kota terbesar di luar<span id="dots2">...</span><span id="more2"> Pulau Jawa. Kota Medan merupakan pintu gerbang wilayah Indonesia bagian barat dengan keberadaan Pelabuhan Belawan dan Bandar Udara Internasional Kuala Namu yang merupakan bandara terbesar kedua di Indonesia. Akses dari pusat kota menuju pelabuhan dan bandara dilengkapi oleh jalan tol dan kereta api.</span></p>
+                            <button class="btn btn-primary" id="btn2" value="tes2" type="button">READ MORE</button>
+                            <button class="btn btn-danger" type="button">View</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                    <div class="thumbnail">
+                        <img src="/Image/yogyakarta.jpg" id="image-preview6"  style="height:207px;width:100%">
+                        <div class="caption">
+                            <h3 id="label1">
+                                <span style="text-shadow: 2px 2px 4px dodgerblue;">Yogyakarta</span> <i style="color:#24a0ed;font-size:16px" class="far fa-thumbs-up"></i>
+                            </h3>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <p class="text-justify">Yogyakarta terletak di bagian selatan pulau Jawa, tepatnya di daerah Jawa Tengah. Yogyakarta merupakan sebuah daerah istimewa dalam Negara Kesatuan Republik<span id="dots3">...</span><span id="more3"> Indonesia yang masih mempertahankan tata pemerintahan berbentuk kesultanan dalam pemerintahan daerahnya. Pada jaman sebelum kemerdekaan, Jogja merupakan daerah dengan pemerintahan sendiri yang bergelar Kesultanan Ngayogyakarta dan Kadipaten Pakualaman.</span></p>
+                            <button class="btn btn-primary" id="btn3" value="tes3" type="button">READ MORE</button>
+                            <button class="btn btn-danger" type="button">View</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                    <div class="thumbnail">
+                        <img src="/Image/mandalika.jpg" id="image-preview5" style="height:207px;width:100%">
+                        <div class="caption">
+                            <h3 style="font-family: Georgia, serif;font-size: 30px;color: blue;text-shadow: 2px 2px 4px dodgerblue;" id="label1">
+                                Mandalika
+                            </h3>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star-half-alt text-warning"></i>
+                            <p class="text-justify">Mandalika adalah kawasan wisata seluas 1.035 hektar yang berlokasi di di Kabupaten Lombok Tengah, Nusa Tenggara Barat. Sejak tahun 2017, Mandalika sudah diresmikan<span id="dots4">...</span><span id="more4"> sebagai Kawasan Ekonomi Khusus (KEK) pariwisata yang diharapkan dapat menjadi tempat liburan yang cukup representatif di Lombok karena dilengkapi beberapa hotel dan beragam fasilitas rekreasi. Mandalika, saat ini, sudah memiliki 7 spot wisata alam yang memesona wisatawan.</span></p>
+                            <button class="btn btn-primary" id="btn4" value="tes4" type="button">READ MORE</button>
+                            <button class="btn btn-danger" type="button">View</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br/>
+        <div class="container" id="container2" style="padding-right: 155px;padding-left: 155px;">
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                    <div class="thumbnail" style="color:gray">
+                        <img src="/Image/labuanbajo.jpg" id="image-preview4" style="height:207px">
+                        <div class="caption">
+                            <h3 style="font-family: Georgia, serif;font-size: 30px;color: blue;text-shadow: 2px 2px 4px dodgerblue;" id="label1">
+                                Labuan Bajo
+                            </h3>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star-half-alt text-warning"></i>
+                            <p class="text-justify">Labuan Bajo merupakan salah satu desa dari 19 desa dan kelurahan yang berada di kecamatan Komodo, Kabupaten Manggarai Barat, provinsi Nusa Tenggara Timur<span id="dots5">...</span><span id="more5">, Indonesia. Labuan Bajo sebelumnya adalah kelurahan sekaligus ibu kota Kecamatan Komodo dan juga merupakan ibu kota Kabupaten Manggarai Barat, Nusa Tenggara Timur, Indonesia. Sekarang dikembangkan menjadi Kota Labuan Bajo. Wilayahnya meliputi: Kampung Ujung, Kampung Tengah, Kampung Air, Lamtoro, Wae Kelambu, Wae Medu, Cowang Dereng, Wae Kesambi, Wae Bo, Lancang, Sernaru, Wae Mata, Pasar Baru, Pede, dan Gorontalo.</span></p>
+                            <button class="btn btn-primary" id="btn5" value="tes5" type="button">READ MORE</button>
+                            <button class="btn btn-danger" type="button">View</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                    <div class="thumbnail">
+                        <img src="/Image/belitung.jpg" id="image-preview3" style="height:207px;width:100%">
+                        <div class="caption">
+                            <h3 style="font-family: Georgia, serif;font-size: 30px;color: blue;text-shadow: 2px 2px 4px dodgerblue;" id="label1">
+                                Belitung
+                            </h3>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star-half-alt text-warning"></i>
+                            <p class="text-justify">Belitung, atau Belitong (bahasa setempat, diambil dari nama sejenis siput laut), dulunya dikenal sebagai Billiton adalah sebuah pulau di lepas oleh Selat Gaspar dan Selat Karimata<span id="dots6">...</span><span id="more6">. Pulau ini terkenal dengan lada putih (Piper sp.) serta akhir-akhir ini menjadi tujuan wisata alam alternatif.Sebagian besar penduduknya, terutama yang tinggal di kawasan pesisir pantai, sangat akrab dengan kehidupan bahari yang kaya dengan hasil ikan laut. Berbagai olahan makanan yang berbahan ikan menjadi makanan sehari-hari penduduknya. Kekayaan laut menjadi salah satu sumber mata pencaharian penduduk Belitung.</span></p>
+                            <button class="btn btn-primary" id="btn6" value="tes6" type="button">READ MORE</button>
+                            <button class="btn btn-danger" type="button">View</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                    <div class="thumbnail">
+                        <img src="/Image/sumba.jpg" id="image-preview" onclick="Choice(this)" style="height:207px;width:100%">
+                        <div class="caption">
+                            <h3 style="font-family: Georgia, serif;font-size: 30px;color: blue;text-shadow: 2px 2px 4px dodgerblue;" id="label1">
+                                Sumba
+                            </h3>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="far fa-star text-warning"></i>
+                            <p class="text-justify">Pulau Sumba adalah sebuah pulau di Provinsi Nusa Tenggara Timur, Indonesia. Luas wilayahnya 10.710 km², dan titik tertingginya Gunung Wanggameti (1.225 m). Sumba<span id="dots7">...</span><span id="more7"> berbatasan dengan Sumbawa di sebelah barat laut, Flores di timur laut, Timor di timur, dan Australia di selatan dan tenggara. Selat Sumba terletak di utara pulau ini. Di bagian timur terletak Laut Sawu serta Samudra Hindia terletak di sebelah selatan dan barat.</span></p>
+                            <button class="btn btn-primary" id="btn7" value="tes7" type="button">READ MORE</button>
+                            <button class="btn btn-danger" type="button">View</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                    <div class="thumbnail">
+                        <img src="/Image/rajaampat.jpg" id="image-preview2" onclick="Choice(this)" style="height:207px;width:100%">
+                        <div class="caption">
+                            <h3 style="font-family: Georgia, serif;font-size: 30px;color: blue;text-shadow: 2px 2px 4px dodgerblue;" id="label1">
+                                Raja Ampat
+                            </h3>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="far fa-star text-warning"></i>
+                            <p class="text-justify">Kepulauan Raja Ampat merupakan rangkaian empat gugusan pulau yang berdekatan dan berlokasi di barat bagian Kepala Burung (Vogelkoop) Pulau Papua. Secara<span id="dots8">...</span><span id="more8"> administrasi, gugusan ini berada di bawah Kabupaten Raja Ampat, Provinsi Papua Barat. Kepulauan ini sekarang menjadi tujuan para penyelam yang tertarik akan keindahan pemandangan bawah lautnya. Empat gugusan pulau yang menjadi anggotanya dinamakan menurut empat pulau terbesarnya, yaitu Pulau Waigeo, Pulau Misool, Pulau Salawati, dan Pulau Batanta.</span></p>
+                            <button class="btn btn-primary" id="btn8" value="tes8" type="button">READ MORE</button>
+                            <button class="btn btn-danger" type="button">View</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br/>
+        <div class="container">
+            <div class="row">
+                <div class="col text-center">
+                    <button class="btn btn-primary" onclick="myFunction()" style="margin-bottom:10px; margin-left:5px; padding: 5px 50px;" id="myBtn"><b id="tes"> View More</b><br/><i id="icon2" class="fas fa-arrow-circle-down"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- container news -->
+    <!-- container bawah -->
+    <div class="container bawah" style="padding-right: 155px;padding-left: 155px;background-color:#f9f8f8;border-top-style: double;border-bottom-style: double;">
+        <h1>Why book with TopHoliday?</h1>
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <img src="/Image/pay.png" width="120px">
+                <h3>Various Payment Options</h3>
+                <p class="text-center">Be more flexible with various payment methods from ATM Transfer, Credit Card, to Internet Banking.</p>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <img src="/Image/discount.png" width="120px">
+                <h3>Special Discounts</h3>
+                <p class="text-center">Special discounted hotels for flight customers, newsletter subscribers and TopHoliday members.</p>
+            </div><div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <img class="img-circle" src="/Image/best.png" width="120px">
+                <h3>StayGuarantee</h3>
+                <p class="text-center">If there a problems with your booking, we'll recommend a similar hotel for you at no additional costs. Or your money back.</p>
+            <br/>
+                      <br />
+            </div>
+        </div>
+    </div>
+    <!-- container bawah -->
+    <!-- gallery -->
+    <div id="gallery">
+        <div class="container"  style="padding-right: 155px;padding-left: 155px;">
+            <h1>
+               Gallery
+            </h1>
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" id="satu"><img class="img-responsive" src="/Image/family.jpg" style="width:3000px;height:500px;"></div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" id="dua">
+                    <div class="col-lg-6 col-md-3 col-sm-3 col-xs-3" id="satu"><img class="img-responsive" src="/Image/familh4.jpeg" style="width:300px;height:180px;margin-top:-30px"></div>
+                    <div class="col-lg-6 col-md-3 col-sm-3 col-xs-3" id="satu"><img class="img-responsive" src="/Image/family2.jpg" style="width:300px;height:180px;margin-top:-30px"></div>
+                    <div class="col-lg-12 col-md-3 col-sm-3 col-xs-3" id="satu"><iframe style="margin-top:20px;margin-left:15px" width="600" height="315" src="https://www.youtube.com/embed/Y7IoPLxJP1Y?autoplay=1&mute=1" frameborder="0" allow="autoplay;" allowfullscreen></iframe></div>
+ 
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- gallery -->
+    <div id="myModal" class="modal">
+
+        <!-- The Close Button -->
+        <span class="close" style="top:60px;color:white;right:15px">&times;</span>
+
+        <!-- Modal Content (The Image) -->
+        <img class="modal-content" id="img01">
+
+        <!-- Modal Caption (Image Text) -->
+        <div id="caption"></div>
+    </div>
+    <!-- about -->
+    <div id="about">
+        <div class="container footer">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+                    <h1> <img src="/Image/logo.png" width="180px"></h1>
+                </div>
+
+                <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
+                    <h2>About Us</h2>
+                    <p>TOPHOLIDAY adalah agen perjalanan ritel dan online yang melayani perjalanan individu serta grup. Dengan paket liburan tematik terlengkap yang dibuat berdasarkan minat klien, seperti: berlibur dengan kapal pesiar, bulan madu, liburan aktif, ski, menyetir sendiri, Club Med, serta Phototrip, dan didukung oleh personel yang berpengalaman di industri perjalanan, Yuktravel menawarkan liburan yang beres dan berbeda bagi pelanggannya.</p>
+                    <hr />
+                    <table border="3" height="80px">
+                        <tr>
+                            <td>
+                                <b>Phone: +62 853 6430 89 82</b>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <b>Email: Topholiday@gmail.com</b>
+                            </td>
+                        </tr>
+                        <tr >
+                            <td  style="padding-right:305px">
+                                <b>Monday - Friday (08.00 - 17.00 WIB)</b>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <h2>Newsletter Subscription</h2>
+                <div class="input-group input-group-lg">
+                    <input type="email" class="form-control" placeholder="Your Email">
+                    <div class="input-group-btn">
+                        <button class="btn btn-primary" type="submit">Subscribe </button>
+                    </div>
+                </div>
+                <div id="icon"><i class="fab fa-instagram" data-toggle="tooltip" title="Instagram"></i><i class="fab fa-facebook-square" data-toggle="tooltip" title="Facebook" style="margin-left:10px"></i><i class="fab fa-twitter-square" data-toggle="tooltip" title="Twitter" style="margin-left:10px"></i><i class="fab fa-youtube" data-toggle="tooltip" title="Youtube" style="margin-left:10px"></i></div>
+                <h2>Payment Methods</h2>
+                <img src="/Image/bca.png" width="60px">
+                <img src="/Image/mandiri.png" width="60px">
+                <img src="/Image/permata.png" width="60px">
+                <img src="/Image/maybank.png" width="60px">
+                <img src="/Image/master.png" width="60px">
+            </div>
+        </div>
+    </div>
+    <!-- about -->
+    <!-- kaki -->
+    <div id="kaki">
+        <div class="container">
+            <h5 class="text-center">TOPHOLIDAY. Since 2018</h5>
+        </div>
+    </div>
+    <button onclick="topFunction()" id="myBtn2" title="Go to top">Top</button>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+
+
+        var dots = document.getElementById("dots");
+        var dots2 = document.getElementById("dots2");
+        var moreText = document.getElementById("more");
+        var moreText2 = document.getElementById("more2");
+        var btnText = document.getElementById("btn");
+        var btnText2 = document.getElementById("btn2");
+        var dots3 = document.getElementById("dots3");
+        var moreText3 = document.getElementById("more3");
+        var btnText3 = document.getElementById("btn3");
+        var dots4 = document.getElementById("dots4");
+        var moreText4 = document.getElementById("more4");
+        var btnText4 = document.getElementById("btn4");
+        var dots5 = document.getElementById("dots5");
+        var moreText5 = document.getElementById("more5");
+        var btnText5 = document.getElementById("btn5");
+        var dots6 = document.getElementById("dots6");
+        var moreText6 = document.getElementById("more6");
+        var btnText6 = document.getElementById("btn6");
+        var dots7 = document.getElementById("dots7");
+        var moreText7 = document.getElementById("more7");
+        var btnText7 = document.getElementById("btn7");
+        var dots8 = document.getElementById("dots8");
+        var moreText8 = document.getElementById("more8");
+        var btnText8 = document.getElementById("btn8");
+        document.getElementById('btn').onclick = function () {
+            if ($('#btn').val() == "tes") {
+                dots.style.display = "none";
+                btnText.innerHTML = "READ LESS";
+                moreText.style.display = "inline";
+                $('#btn').val("");
+            }
+            else {
+                dots.style.display = "inline";
+                btnText.innerHTML = "READ MORE";
+                moreText.style.display = "none";
+                $('#btn').val("tes");
+            }
+        }
+        document.getElementById('btn2').onclick = function () {
+            if ($('#btn2').val() == "tes2") {
+                dots2.style.display = "none";
+                btnText2.innerHTML = "READ LESS";
+                moreText2.style.display = "inline";
+                $('#btn2').val("");
+            }
+            else {
+                dots2.style.display = "inline";
+                btnText2.innerHTML = "READ MORE";
+                moreText2.style.display = "none";
+                $('#btn2').val("tes2");
+            }
+        }
+        document.getElementById('btn3').onclick = function () {
+            if ($('#btn3').val() == "tes3") {
+                dots3.style.display = "none";
+                btnText3.innerHTML = "READ LESS";
+                moreText3.style.display = "inline";
+                $('#btn3').val("");
+            }
+            else {
+                dots3.style.display = "inline";
+                btnText3.innerHTML = "READ MORE";
+                moreText3.style.display = "none";
+                $('#btn3').val("tes3");
+            }
+        }
+        document.getElementById('btn4').onclick = function () {
+            if ($('#btn4').val() == "tes4") {
+                dots4.style.display = "none";
+                btnText4.innerHTML = "READ LESS";
+                moreText4.style.display = "inline";
+                $('#btn4').val("");
+            }
+            else {
+                dots4.style.display = "inline";
+                btnText4.innerHTML = "READ MORE";
+                moreText4.style.display = "none";
+                $('#btn4').val("tes4");
+            }
+        }
+        document.getElementById('btn5').onclick = function () {
+            if ($('#btn5').val() == "tes5") {
+                dots5.style.display = "none";
+                btnText5.innerHTML = "READ LESS";
+                moreText5.style.display = "inline";
+                $('#btn5').val("");
+            }
+            else {
+                dots5.style.display = "inline";
+                btnText5.innerHTML = "READ MORE";
+                moreText5.style.display = "none";
+                $('#btn5').val("tes5");
+            }
+        }
+        document.getElementById('btn6').onclick = function () {
+            if ($('#btn6').val() == "tes6") {
+                dots6.style.display = "none";
+                btnText6.innerHTML = "READ LESS";
+                moreText6.style.display = "inline";
+                $('#btn6').val("");
+            }
+            else {
+                dots6.style.display = "inline";
+                btnText6.innerHTML = "READ MORE";
+                moreText6.style.display = "none";
+                $('#btn6').val("tes6");
+            }
+        }
+        document.getElementById('btn7').onclick = function () {
+            if ($('#btn7').val() == "tes7") {
+                dots7.style.display = "none";
+                btnText7.innerHTML = "READ LESS";
+                moreText7.style.display = "inline";
+                $('#btn7').val("");
+            }
+            else {
+                dots7.style.display = "inline";
+                btnText7.innerHTML = "READ MORE";
+                moreText7.style.display = "none";
+                $('#btn7').val("tes7");
+            }
+        }
+        document.getElementById('btn8').onclick = function () {
+            if ($('#btn8').val() == "tes8") {
+                dots8.style.display = "none";
+                btnText8.innerHTML = "READ LESS";
+                moreText8.style.display = "inline";
+                $('#btn8').val("");
+            }
+            else {
+                dots8.style.display = "inline";
+                btnText8.innerHTML = "READ MORE";
+                moreText8.style.display = "none";
+                $('#btn8').val("tes8");
+            }
+        }
+
+
+
+    
+    function myFunction() {
+        var dots = document.getElementById("dots");
+        var moreText = document.getElementById("container2");
+        var btnText = document.getElementById("myBtn");
+
+        if ($('#container2').css('display') === 'none') {
+            //dots.style.display = "inline";
+            $("#tes").html("<b>View Less</b>");
+            $("#container2").css("display", "block");
+            $('#icon2').toggleClass('fa-rotate-180');
+            //$(this).find($("#icon2")).toggleClass('fa-arrow-circle-down fas fa-arrow-circle-up');
+        } else {
+            //dots.style.display = "none";
+            $("#tes").html("<b>View More</b>");
+            $("#container2").css("display", "none");
+            $('#icon2').toggleClass('fa-rotate-180');
+        }
+    }
+
+        var modal = document.getElementById("myModal");
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+
+            document.getElementById('image-preview').onclick = function () {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+                captionText.innerHTML = this.alt;
+            }
+            document.getElementById('image-preview2').onclick = function () {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+                captionText.innerHTML = this.alt;
+            }
+            document.getElementById('image-preview3').onclick = function () {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+                captionText.innerHTML = this.alt;
+            }
+
+            document.getElementById('image-preview4').onclick = function () {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+                captionText.innerHTML = this.alt;
+            }
+
+            document.getElementById('image-preview5').onclick = function () {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+                captionText.innerHTML = this.alt;
+            }
+
+            document.getElementById('image-preview6').onclick = function () {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+                captionText.innerHTML = this.alt;
+            }
+
+            document.getElementById('image-preview7').onclick = function () {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+                captionText.innerHTML = this.alt;
+            }
+            document.getElementById('image-preview8').onclick = function () {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+                captionText.innerHTML = this.alt;
+            }
+
+
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("modal")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+    //}
+
+    mybutton = document.getElementById("myBtn2");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function () { scrollFunction() };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+
+    $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+</script>

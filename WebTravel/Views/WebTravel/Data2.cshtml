@@ -1,0 +1,916 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Data2</title>
+    <link rel="stylesheet" href="~/content/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <style>
+        .coupon {
+  border: 5px dotted #bbb; /* Dotted border */
+  width: 90%;
+  border-radius: 15px; /* Rounded border */
+  margin: 0 auto; /* Center the coupon */
+  max-width: 600px;
+}
+
+.container {
+  padding: 2px 16px;
+  background-color: #f1f1f1;
+}
+
+.promo {
+  background: #ccc;
+  padding: 3px;
+}
+
+.expire {
+  color: red;
+}
+    .modal-dialog {
+        width: 100%;
+        margin: 50px auto;
+    }
+    body { margin-top:20px; }
+.panel-title {display: inline;font-weight: bold;}
+.checkbox.pull-right { margin: 0; }
+.pl-ziro { padding-left: 0px; }
+    </style>
+    <link href="~/Content/StyleSheet2.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary fixed-top">
+
+        <img src="/Image/logo.png" class="ml-2" alt="Avatar" width="40px">
+        <a class="navbar-brand" href="#" style="font-family: Verdana,sans-serif;color:white"><b>TopHoliday</b></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto mr-4">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/Home/Index" style="font-family: Verdana,sans-serif;color:white"><b>Home</b> <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="/Home/Index" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Disabled</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+
+    </nav>
+    <div class="row mt-5 no-gutters">
+        <div class="col-md-2 bg-light">
+            <ul class="list-group p-2 pt-4" style="margin-left:10px;">
+                <li class="list-group-item bg-primary"><i class="fas fa-list"></i> Kategori Produk</li>
+                <li class="list-group-item bg-warning"><i class="fas fa-angle-right"></i> Bali</li>
+                <li class="list-group-item"><i class="fas fa-angle-right"></i> Medan</li>
+                <li class="list-group-item"><i class="fas fa-angle-right"></i> Yogyakarta</li>
+                <li class="list-group-item"><i class="fas fa-angle-right"></i> Mandalika</li>
+                <li class="list-group-item"><i class="fas fa-angle-right"></i> Labuan Bajo</li>
+                <li class="list-group-item"><i class="fas fa-angle-right"></i> Belitung</li>
+                <li class="list-group-item"><i class="fas fa-angle-right"></i> Sumba</li>
+                <li class="list-group-item"><i class="fas fa-angle-right"></i> Raja Ampat</li>
+            </ul>
+            <br />
+            <div class="coupon" style="margin-left:15px">
+                <div class="container">
+                    <h4 style="font-family:Cursive;text-align:center"><b>Special Discount</b></h4>
+                </div>
+                <img src="/Image/bali.jpg" alt="Avatar" style="width:100%;">
+                <div class="container" style="background-color:white">
+                    <h2><b>20% OFF YOUR PURCHASE</b></h2>
+                    <p>Available only in Bali, Medan, Belitung & Sumba.</p>
+                </div>
+                <div class="container">
+                    <p>Use Promo Code: <span class="promo">BOH232</span></p>
+                    <p class="expire">Expires: June 03, 2021</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-10">
+            <div id="carouselExampleControls" style="margin-top:12px" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100" style="width:100%;max-height:700px" src="/Image/bali2.jpg" alt="First slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" style="width:100%;max-height:700px" src="/Image/bali3.jpg" alt="Second slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" style="width:100%;max-height:700px" src="/Image/bali4.jpg" alt="Third slide">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+            <h2 class="text-center font-weight-bold m-4">BALI</h2>
+            <div class="row mx-auto">
+                <div class="card" style="width: 20.5rem;margin-left:20px">
+                    <img src="/Image/tanahlot.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">3D/2N Favorite Bali Full Day Bedugul with Tanah Lot & Nusa Dua Tour</h5>
+                        <p class="card-text">Starting(/Person) <br /><b style="color:red">IDR 1.300.000 </b><span style="margin-left:20px"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Bali - Indonesia</span></p>
+                        <a href="#" class="btn btn-primary" id="up" data-toggle="modal">Detail</a>
+                        <a href="#" class="btn btn-danger" id="book" data-toggle="modal"><i class="fas fa-shopping-cart"></i></a>
+                        <a href="#" class="btn btn-warning" id="pop" data-toggle="modal"><i class="fas fa-map-marker-alt"></i></a>
+
+                    </div>
+                </div>
+                <div class="card ml-2 mr-2" style="width: 20.5rem;margin-left:20px">
+                    <img src="/Image/nusa.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">4D/3N Favourite Bali Full Day Bedugul With Tanah Lot & Nusa Dua Tour  </h5>
+                        <p class="card-text">Starting(/Person)<br /><b style="color:red">IDR 1.700.000 </b><span style="margin-left:20px"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Bali - Indonesia</span></p>
+                        <a href="#" class="btn btn-primary" id="up2" data-toggle="modal">Detail</a>
+                        <a href="#" class="btn btn-danger" id="book2" data-toggle="modal"><i class="fas fa-shopping-cart"></i></a>
+                        <a href="#" class="btn btn-warning" id="pop2" data-toggle="modal"><i class="fas fa-map-marker-alt"></i></a>
+                    </div>
+                </div>
+                <div class="card ml-2 mr-2" style="width: 20.5rem;margin-left:20px">
+                    <img src="/Image/tour.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">4D/3N Favourite Bali Full Day Bedugul - Nusa Dua - Kintamani Tour </h5>
+                        <p class="card-text">Starting(/Person)<br /><b style="color:red">IDR 2.100.000 </b><span style="margin-left:20px"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Bali - Indonesia</span></p>
+                        <a href="#" class="btn btn-primary" id="up3" data-toggle="modal">Detail</a>
+                        <a href="#" class="btn btn-danger" id="book3" data-toggle="modal"><i class="fas fa-shopping-cart"></i></a>
+                        <a href="#" class="btn btn-warning" id="pop3" data-toggle="modal"><i class="fas fa-map-marker-alt"></i></a>
+                    </div>
+                </div>
+                <div class="card ml-2 mr-2" style="width: 20.5rem;margin-left:20px">
+                    <img src="/Image/club.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">4D/3N Experience All Inclusive Package At Club Med Bali</h5>
+                        <br />
+                        <p class="card-text">Starting(/Person)<br /><b style="color:red">IDR 1.800.000 </b><span style="margin-left:20px"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Bali - Indonesia</span></p>
+                        <a href="#" class="btn btn-primary" id="up4" data-toggle="modal">Detail</a>
+                        <a href="#" class="btn btn-danger" id="book4" data-toggle="modal"><i class="fas fa-shopping-cart"></i></a>
+                        <a href="#" class="btn btn-warning" id="pop4" data-toggle="modal"><i class="fas fa-map-marker-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row mx-auto mt-4 mb-4">
+                <div class="card" style="width: 20.5rem;margin-left:20px">
+                    <img src="/Image/marine.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">5D/4N Favourite Bali Full Day Bedugul - Nusa Dua - Kintamani Tour With Bali Safari & Marine Park </h5>
+                        <p class="card-text">Starting(/Person) <br /><b style="color:red">IDR 3.100.000 </b><span style="margin-left:20px"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Bali - Indonesia</span></p>
+                        <a href="#" class="btn btn-primary" id="up5" data-toggle="modal">Detail</a>
+                        <a href="#" class="btn btn-danger" id="book5" data-toggle="modal"><i class="fas fa-shopping-cart"></i></a>
+                        <a href="#" class="btn btn-warning" id="pop5" data-toggle="modal"><i class="fas fa-map-marker-alt"></i></a>
+
+                    </div>
+                </div>
+                <div class="card ml-2 mr-2" style="width: 20.5rem;margin-left:20px">
+                    <img src="/Image/bar.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">RIMBA Jimbaran Bali by AYANA 3D/2N Honeymoon Sanctuary Escape Package Hillside Room - 2020/2021  </h5>
+                        <p class="card-text">Starting(/Person)<br /><b style="color:red">IDR 2.700.000 </b><span style="margin-left:20px"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Bali - Indonesia</span></p>
+                        <a href="#" class="btn btn-primary" id="up6" data-toggle="modal">Detail</a>
+                        <a href="#" class="btn btn-danger" id="book6" data-toggle="modal"><i class="fas fa-shopping-cart"></i></a>
+                        <a href="#" class="btn btn-warning" id="pop6" data-toggle="modal"><i class="fas fa-map-marker-alt"></i></a>
+                    </div>
+                </div>
+                <div class="card ml-2 mr-2" style="width: 20.5rem;margin-left:20px">
+                    <img src="/Image/lokha.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">The Lokha Ubud Resort, Villas and Spa 3D/2N Free & Easy Packages Suite Room 2020 - 2021 </h5>
+                        <p class="card-text">Starting(/Person)<br /><b style="color:red">IDR 2.100.000 </b><span style="margin-left:20px"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Bali - Indonesia</span></p>
+                        <a href="#" class="btn btn-primary" id="up7" data-toggle="modal">Detail</a>
+                        <a href="#" class="btn btn-danger" id="book7" data-toggle="modal"><i class="fas fa-shopping-cart"></i></a>
+                        <a href="#" class="btn btn-warning" id="pop7" data-toggle="modal"><i class="fas fa-map-marker-alt"></i></a>
+                    </div>
+                </div>
+                <div class="card ml-2 mr-2" style="width: 20.5rem;margin-left:20px">
+                    <img src="/Image/ubud.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Kamandalu Ubud 3D/2N Honeymoon Package Ubud Chalet</h5>
+                        <br />
+                        <p class="card-text">Starting(/Person)<br /><b style="color:red">IDR 7.800.000 </b><span style="margin-left:20px"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Bali - Indonesia</span></p>
+                        <a href="#" class="btn btn-primary" id="up8" data-toggle="modal">Detail</a>
+                        <a href="#" class="btn btn-danger" id="book8" data-toggle="modal"><i class="fas fa-shopping-cart"></i></a>
+                        <a href="#" class="btn btn-warning" id="pop8" data-toggle="modal"><i class="fas fa-map-marker-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+                <!-- Modal -->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12">
+                            <div class="modal fade" id="buy1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header bg-primary">
+                                            <h5 class="modal-title" id="judul" style="color:white">Favorite Bali Full Day Bedugul with Tanah Lot & Nusa Dua Tour</h5>
+                                            <button type="button" class="close" onclick="validateShipping3()" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="col-sm-5 col-md-6">
+                                                        <h4>Add payment:</h4>
+                                                        <div class="panel panel-default">
+                                                            <div class="panel-body form-horizontal payment-form">
+                                                                <div class="form-group">
+                                                                    <label for="concept" class="col-sm-3 control-label">Name:</label>
+                                                                    <div class="col-sm-9">
+                                                                        <input type="text" autocomplete="off" class="form-control" id="concept" name="concept">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="description" class="col-sm-3 control-label">Email:</label>
+                                                                    <div class="col-sm-9">
+                                                                        <input type="text" autocomplete="off"  class="form-control" id="description" name="description">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="amount" class="col-sm-3 control-label">Amount</label>
+                                                                    <div class="col-sm-9">
+                                                                        <input type="number" autocomplete="off"  class="form-control" id="amount" name="amount">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="status" class="col-sm-3 control-label">Status</label>
+                                                                    <div class="col-sm-9">
+                                                                        <select class="form-control" id="status" name="status">
+                                                                            <option>Paid</option>
+                                                                            <option>Unpaid</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="date" class="col-sm-3 control-label">Date</label>
+                                                                    <div class="col-sm-9">
+                                                                        <input type="date" class="form-control" id="date" name="date">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <div class="col-md-12">
+                                                                        <button style="width:280px" type="button" class="btn btn-primary preview-add-button">
+                                                                            <i class="fa fa-plus">Add</i>
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-5 col-md-6">
+                                                        <h3>Payment Details</h3>
+                                                        <div class="row">
+                                                            <div class="col-xs-12">
+                                                                <div class="table-responsive">
+                                                                    <table class="table preview-table">
+                                                                        <thead>
+                                                                            <tr>
+                                                                                <th>Concept</th>
+                                                                                <th>Description</th>
+                                                                                <th>Amount</th>
+                                                                                <th>Status</th>
+                                                                                <th>Date</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody></tbody> <!-- preview content goes here-->
+                                                                    </table>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        @*<div class="text-left">
+                                                            <div class="col-xs-12">
+                                                                <h4>Total: <strong><span class="preview-total"></span></strong></h4>
+                                                            </div>
+                                                        </div>*@
+
+                                                            @*<div class="col-xs-12">
+                                                                <hr style="border:1px dashed #dddddd;">
+                                                                <button type="button" class="btn btn-primary btn-block">Submit all and finish</button>
+                                                            </div>*@
+                                                        <div class="panel panel-default">
+                                                            @*<div class="panel-heading">
+                                                                <h3 class="panel-title">
+                                                                    Payment Details
+                                                                </h3>
+                                                                <div class="checkbox pull-right">
+                                                                    <label>
+                                                                        <input type="checkbox" />
+                                                                        Remember
+                                                                    </label>
+                                                                </div>
+                                                            </div>*@
+                                                            <div class="panel-body">
+                                                                <form role="form">
+                                                                    <div class="form-group">
+                                                                        <label for="cardNumber">
+                                                                            CARD NUMBER
+                                                                        </label>
+                                                                        <div class="input-group">
+                                                                            <input type="text" class="form-control" id="cardNumber" placeholder="Valid Card Number"
+                                                                                   required autofocus />
+                                                                            <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="col-xs-12 col-md-12 pull-right">
+                                                                            <div class="form-group">
+                                                                                <label for="cvCode">
+                                                                                    PROMO CODE
+                                                                                </label>
+                                                                                <input type="password" class="form-control" id="cvCode" placeholder="Promo Code" required />
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-xs-12 col-md-12 pull-left">
+                                                                            <div class="paymentWrap">
+                                                                                <div class="paymentBtnGroup btn-group-justified" data-toggle="buttons">
+                                                                                    <label class="btn paymentMethod active">
+                                                                                        <div class="method visa"></div>
+                                                                                        <input type="radio" name="options" checked>
+                                                                                    </label>
+                                                                                    <label class="btn paymentMethod">
+                                                                                        <div class="method master-card"></div>
+                                                                                        <input type="radio" name="options">
+                                                                                    </label>
+                                                                                    <label class="btn paymentMethod">
+                                                                                        <div class="method amex"></div>
+                                                                                        <input type="radio" name="options">
+                                                                                    </label>
+                                                                                    <label class="btn paymentMethod">
+                                                                                        <div class="method maybank"></div>
+                                                                                        <input type="radio" name="options">
+                                                                                    </label>
+                                                                                    <label class="btn paymentMethod">
+                                                                                        <div class="method ocb"></div>
+                                                                                        <input type="radio" name="options">
+                                                                                    </label>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                        <ul class="nav nav-pills nav-stacked">
+                                                            <li class="active">
+                                                                <a href="#"><span class="badge pull-right" id="price"><span class="glyphicon glyphicon-usd"></span>4200</span> Final Payment</a>
+                                                            </li>
+                                                        </ul>
+                                                        <br />
+                                                        <a href="http://www.jquery2dotnet.com" class="btn btn-success btn-lg btn-block" role="button">Pay</a>
+                                                    </div>
+                                                   
+                                                    @*<div class="col-xs-12 col-md-5">
+                                                        <div class="panel panel-default">
+                                                            <div class="panel-heading">
+                                                                <h3 class="panel-title">
+                                                                    Payment Details
+                                                                </h3>
+                                                                <div class="checkbox pull-right">
+                                                                    <label>
+                                                                        <input type="checkbox" />
+                                                                        Remember
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="panel-body">
+                                                                <form role="form">
+                                                                    <div class="form-group">
+                                                                        <label for="cardNumber">
+                                                                            CARD NUMBER
+                                                                        </label>
+                                                                        <div class="input-group">
+                                                                            <input type="text" class="form-control" id="cardNumber" placeholder="Valid Card Number"
+                                                                                   required autofocus />
+                                                                            <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="row">
+                                                                        <div class="col-xs-12 col-md-12 pull-right">
+                                                                            <div class="form-group">
+                                                                                <label for="cvCode">
+                                                                                    PROMO CODE
+                                                                                </label>
+                                                                                <input type="password" class="form-control" id="cvCode" placeholder="CV" required />
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-xs-12 col-md-12 pull-left">
+                                                                            <div class="paymentWrap">
+                                                                                <div class="paymentBtnGroup btn-group-justified" data-toggle="buttons">
+                                                                                    <label class="btn paymentMethod active">
+                                                                                        <div class="method visa"></div>
+                                                                                        <input type="radio" name="options" checked>
+                                                                                    </label>
+                                                                                    <label class="btn paymentMethod">
+                                                                                        <div class="method master-card"></div>
+                                                                                        <input type="radio" name="options">
+                                                                                    </label>
+                                                                                    <label class="btn paymentMethod">
+                                                                                        <div class="method amex"></div>
+                                                                                        <input type="radio" name="options">
+                                                                                    </label>
+                                                                                    <label class="btn paymentMethod">
+                                                                                        <div class="method maybank"></div>
+                                                                                        <input type="radio" name="options">
+                                                                                    </label>
+                                                                                    <label class="btn paymentMethod">
+                                                                                        <div class="method ocb"></div>
+                                                                                        <input type="radio" name="options">
+                                                                                    </label>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                        <ul class="nav nav-pills nav-stacked">
+                                                            <li class="active">
+                                                                <a href="#"><span class="badge pull-right"><span class="glyphicon glyphicon-usd"></span>4200</span> Final Payment</a>
+                                                            </li>
+                                                        </ul>
+                                                        <br />
+                                                        <a href="http://www.jquery2dotnet.com" class="btn btn-success btn-lg btn-block" role="button">Pay</a>
+                                                    </div>*@
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer bg-primary">
+                                            <button type="button" class="btn btn-secondary" onclick="validateShipping3()">Close</button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal -->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12">
+                            <div class="modal fade" id="produk1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header bg-primary">
+                                            <h5 class="modal-title" id="text1" style="color:white">Favorite Bali Full Day Bedugul with Tanah Lot & Nusa Dua Tour</h5>
+                                            <button type="button" class="close" onclick="validateShipping2()" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                           <div class="row">
+                                               <div class="col-lg-5 col-md-6">
+                                                   <img src="/Image/bali.jpg" id="images" width="100%" alt="Alternate Text" />
+                                               </div>
+                                               <div class="col-lg-7 col-md-6">
+                                                   <table class="table table-borderless">
+                                                       <tr>
+                                                           <th><i class="fas fa-plane-departure text-primary mr-2" width="100%"></i> Tour Duration:</th>
+                                                           <td id="text2">3 Days / 2 Night</td>
+                                                       </tr>
+                                                       <tr>
+                                                           <th><img src="/Image/trip.png" style="margin-right:4px" width="25px"/> Minimum Pax:</th>
+                                                           <td id="text3">3 People</td>
+                                                       </tr>
+                                                       <tr>
+                                                           <th><i class="far fa-calendar-check text-primary ml-1 mr-2" style="font-size:20px"></i> Departure:</th>
+                                                           <td class="mr-4" id="text4">1 Aug 2020 - 31 Mar 2021</td>
+                                                       </tr>
+                                                       <tr>
+                                                           <th><i class="fas fa-suitcase-rolling text-primary ml-1 mr-2" style="font-size:22px"></i> Category:</th>
+                                                           <td class="mr-4" id="text5">Leisure</td>
+                                                       </tr>
+                                                       <tr>
+                                                           <th><i class="fas fa-map-marked text-primary ml-1 mr-1" style="font-size:18px"></i> Tour Type:</th>
+                                                           <td class="mr-4" id="text6">Private Tour</td>
+                                                       </tr>
+                                                   </table>
+                                               </div>
+                                           </div>
+                                        </div>
+                                        <div class="modal-footer bg-primary">
+                                            <button type="button" class="btn btn-secondary" onclick="validateShipping2()">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal -->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12">
+                            <!-- Modal -->
+                            <div class="modal fade" id="myModal" style="border-radius:20px;" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                <div class="modal-dialog modal-lg modal-md modal-sm">
+
+                                    <!-- Modal content-->
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <span style="font-size:20px;font-family:Times New Roman, Times, serif;"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Bali - Indonesia</span>
+
+                                        </div>
+                                        <div class="modal-body">
+                                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1503.2117328803135!2d115.08638905919885!3d-8.621558117522833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd237824f71deab%3A0xcaabe270f7e34d69!2sTanah%20Lot!5e1!3m2!1sen!2sid!4v1614052249438!5m2!1sen!2sid" id="map" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" onclick="validateShipping()">Close</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="loader" id="load" style="display:none"></div>
+
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+                <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    function validateShipping(){
+        $('#myModal').modal('hide');
+    }
+    function validateShipping2() {
+        $('#produk1').modal('hide');
+    }
+    function validateShipping3() {
+        $('#buy1').modal('hide');
+    }
+    document.getElementById('pop').onclick = function () {
+        $('#map').attr('src', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1503.2117328803135!2d115.08638905919885!3d-8.621558117522833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd237824f71deab%3A0xcaabe270f7e34d69!2sTanah%20Lot!5e1!3m2!1sen!2sid!4v1614052249438!5m2!1sen!2sid');
+        $("#myModal").modal("show");
+        $("#myModal").css('visibility', 'hidden');
+        $("#load").css('display', 'block');
+        var delay = 710;
+        setTimeout(function () {
+            $("#myModal").css('visibility', 'visible');
+            $("#load").css('display', 'none');
+        }, delay);
+    }
+    document.getElementById('pop3').onclick = function () {
+        $('#map').attr('src', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d252706.10094117207!2d115.20490538736415!3d-8.249640378872733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd1f46fa4effc21%3A0x4030bfbca7d2c20!2sKintamani%2C%20Bangli%20Regency%2C%20Bali!5e0!3m2!1sen!2sid!4v1614062055603!5m2!1sen!2sid');
+        $("#myModal").modal("show");
+        $("#myModal").css('visibility', 'hidden');
+        $("#load").css('display', 'block');
+        var delay = 710;
+        setTimeout(function () {
+            $("#myModal").css('visibility', 'visible');
+            $("#load").css('display', 'none');
+        }, delay);
+    }
+    document.getElementById('pop2').onclick = function () {
+        $('#map').attr('src', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13261.382190461873!2d115.20393592976554!3d-8.820550878252352!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd242d6feba16fd%3A0x84a7328be1e50953!2sNusa%20Dua%20Beach!5e0!3m2!1sen!2sid!4v1614064338849!5m2!1sen!2sid');
+        $("#myModal").modal("show");
+        $("#myModal").css('visibility', 'hidden');
+        $("#load").css('display', 'block');
+        var delay = 710;
+        setTimeout(function () {
+            $("#myModal").css('visibility', 'visible');
+            $("#load").css('display', 'none');
+        }, delay);
+    }
+    document.getElementById('pop4').onclick = function () {
+        $('#map').attr('src', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3942.955277884611!2d115.22713091433795!3d-8.79027209226975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd24318a264ba63%3A0x4e03f7b5ae3fabba!2sClub%20Med%20Bali!5e0!3m2!1sen!2sid!4v1614064645391!5m2!1sen!2sid');
+        $("#myModal").modal("show");
+        $("#myModal").css('visibility', 'hidden');
+        $("#load").css('display', 'block');
+        var delay = 710;
+        setTimeout(function () {
+            $("#myModal").css('visibility', 'visible');
+            $("#load").css('display', 'none');
+        }, delay);
+    }
+    document.getElementById('pop5').onclick = function () {
+        $('#map').attr('src', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3945.131430983738!2d115.34554851433549!3d-8.583359789487892!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd222226a31080b%3A0x5d2641aee632244e!2sBali%20Safari%20%26%20Marine%20Park!5e0!3m2!1sen!2sid!4v1614064918995!5m2!1sen!2sid');
+        $("#myModal").modal("show");
+        $("#myModal").css('visibility', 'hidden');
+        $("#load").css('display', 'block');
+        var delay = 710;
+        setTimeout(function () {
+            $("#myModal").css('visibility', 'visible');
+            $("#load").css('display', 'none');
+        }, delay);
+    }
+    document.getElementById('pop6').onclick = function () {
+        $('#map').attr('src', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3942.9216871515646!2d115.13727861433784!3d-8.793428092312707!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd24503382b7043%3A0xbac74ce569879567!2sRIMBA%20Jimbaran%20BALI%20by%20AYANA!5e0!3m2!1sen!2sid!4v1614065038409!5m2!1sen!2sid');
+        $("#myModal").modal("show");
+        $("#myModal").css('visibility', 'hidden');
+        $("#load").css('display', 'block');
+        var delay = 710;
+        setTimeout(function () {
+            $("#myModal").css('visibility', 'visible');
+            $("#load").css('display', 'none');
+        }, delay);
+    }
+    document.getElementById('pop7').onclick = function () {
+        $('#map').attr('src', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3946.0726044132475!2d115.2566323143344!3d-8.492321888285982!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd23d363dafaff7%3A0x1fb4ee1fb63b035c!2sThe%20Lokha%20Ubud%20Resort%2C%20Villas%20%26%20Spa!5e0!3m2!1sen!2sid!4v1614065221022!5m2!1sen!2sid');
+        $("#myModal").modal("show");
+        $("#myModal").css('visibility', 'hidden');
+        $("#load").css('display', 'block');
+        var delay = 710;
+        setTimeout(function () {
+            $("#myModal").css('visibility', 'visible');
+            $("#load").css('display', 'none');
+        }, delay);
+    }
+    document.getElementById('pop8').onclick = function () {
+        $('#map').attr('src', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3375.713399813505!2d115.27363661433445!3d-8.495549388328355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd23d5a69f02e2f%3A0xa801e78642786105!2sKamandalu%20Ubud!5e1!3m2!1sen!2sid!4v1614066141531!5m2!1sen!2sid');
+        $("#myModal").modal("show");
+        $("#myModal").css('visibility', 'hidden');
+        $("#load").css('display', 'block');
+        var delay = 710;
+        setTimeout(function () {
+            $("#myModal").css('visibility', 'visible');
+            $("#load").css('display', 'none');
+        }, delay);
+    }
+    document.getElementById('up').onclick = function () {
+        $('#images').attr('src', '/Image/tanahlot.jpg');
+        $("#text1").text("Favourite Bali Full Day Bedugul With Tanah Lot & Nusa Dua Tour");
+        $("#text4").text("1 Aug 2020 - 31 Mar 2021");
+        $("#text2").text("3 Days / 2 Night");
+        $("#text3").text("3 Person");
+        $("#text6").text("Private Tour");
+        $("#produk1").modal("show");
+        $("#produk1").css('visibility', 'hidden');
+        $("#load").css('display', 'block');
+        var delay = 710;
+        setTimeout(function () {
+            $("#produk1").css('visibility', 'visible');
+            $("#load").css('display', 'none');
+        }, delay);
+    }
+    document.getElementById('up2').onclick = function () {
+        $('#images').attr('src', '/Image/nusa.jpg');
+        $("#text1").text("Favourite Bali Full Day Bedugul With Tanah Lot & Nusa Dua Tour");
+        $("#text3").text("2 Person");
+        $("#text2").text("4 Days / 3 Night");
+        $("#text6").text("Private Tour");
+        $("#text4").text("4 Feb 2020 - 28 June 2021");
+        $("#produk1").modal("show");
+        $("#produk1").css('visibility', 'hidden');
+        $("#load").css('display', 'block');
+        var delay = 710;
+        setTimeout(function () {
+            $("#produk1").css('visibility', 'visible');
+            $("#load").css('display', 'none');
+        }, delay);
+    }
+    document.getElementById('up3').onclick = function () {
+        $('#images').attr('src', '/Image/tour.jpg');
+        $("#text1").text("Favourite Bali Full Day Bedugul - Nusa Dua - Kintamani Tour");
+        $("#text3").text("3 Person");
+        $("#text4").text("1 April 2020 - 20 Dec 2021");
+        $("#text2").text("4 Days / 3 Night");
+        $("#text6").text("Group Tour");
+        $("#produk1").modal("show");
+        $("#produk1").css('visibility', 'hidden');
+        $("#load").css('display', 'block');
+        var delay = 710;
+        setTimeout(function () {
+            $("#produk1").css('visibility', 'visible');
+            $("#load").css('display', 'none');
+        }, delay);
+    }
+    document.getElementById('up4').onclick = function () {
+        $('#images').attr('src', '/Image/club.jpg');
+        $("#text1").text("Experience All Inclusive Package At Club Med Bali");
+        $("#text3").text("3 Person");
+        $("#text4").text("1 Jan 2020 - 31 Mar 2021");
+        $("#text2").text("4 Days / 3 Night");
+        $("#text6").text("Private Tour");
+        $("#produk1").modal("show");
+        $("#produk1").css('visibility', 'hidden');
+        $("#load").css('display', 'block');
+        var delay = 710;
+        setTimeout(function () {
+            $("#produk1").css('visibility', 'visible');
+            $("#load").css('display', 'none');
+        }, delay);
+    }
+    document.getElementById('up5').onclick = function () {
+        $('#images').attr('src', '/Image/marine.jpg');
+        $("#text2").text("5 Days / 4 Night");
+        $("#text1").text("Favourite Bali Full Day Bedugul - Nusa Dua - Kintamani Tour With Bali Safari & Marine Park");
+        $("#text3").text("3 Person");
+        $("#text4").text("5 May 2020 - 31 Nov 2021");
+        $("#text6").text("Group Tour");
+        $("#produk1").modal("show");
+        $("#produk1").css('visibility', 'hidden');
+        $("#load").css('display', 'block');
+        var delay = 710;
+        setTimeout(function () {
+            $("#produk1").css('visibility', 'visible');
+            $("#load").css('display', 'none');
+        }, delay);
+    }
+    document.getElementById('up6').onclick = function () {
+        $('#images').attr('src', '/Image/bar.jpg');
+        $("#text1").text("RIMBA Jimbaran Bali by AYANA");
+        $("#text3").text("2 Person");
+        $("#text2").text("3 Days / 2 Night");
+        $("#text4").text("8 Aug 2020 - 31 April 2021");
+        $("#text6").text("Private Tour");
+        $("#produk1").modal("show");
+        $("#produk1").css('visibility', 'hidden');
+        $("#load").css('display', 'block');
+        var delay = 710;
+        setTimeout(function () {
+            $("#produk1").css('visibility', 'visible');
+            $("#load").css('display', 'none');
+        }, delay);
+    }
+    document.getElementById('up7').onclick = function () {
+        $('#images').attr('src', '/Image/lokha.jpg');
+        $("#text2").text("3 Days / 2 Night");
+        $("#text1").text("The Lokha Ubud Resort, Villas and Spa");
+        $("#text3").text("2 Person");
+        $("#text4").text("1 Feb 2020 - 10 May 2021");
+        $("#text6").text("Private Tour");
+        $("#produk1").modal("show");
+        $("#produk1").css('visibility', 'hidden');
+        $("#load").css('display', 'block');
+        var delay = 710;
+        setTimeout(function () {
+            $("#produk1").css('visibility', 'visible');
+            $("#load").css('display', 'none');
+        }, delay);
+    }
+    document.getElementById('up8').onclick = function () {
+        $('#images').attr('src', '/Image/ubud.jpg');
+        $("#text2").text("3 Days / 2 Night");
+        $("#text3").text("3 Person");
+        $("#text1").text("Kamandalu Ubud Honeymoon Package Ubud Chalet");
+        $("#text4").text("1 Feb 2020 - 13 March 2021");
+        $("#text6").text("Private Tour");
+        $("#produk1").modal("show");
+        $("#produk1").css('visibility', 'hidden');
+        $("#load").css('display', 'block');
+        var delay = 710;
+        setTimeout(function () {
+            $("#produk1").css('visibility', 'visible');
+            $("#load").css('display', 'none');
+        }, delay);
+    }
+    function calc_total() {
+        var sum = 0;
+        $('.input-amount').each(function () {
+            sum += parseFloat($(this).text());
+        });
+        $("#price").text(sum);
+    }
+    $(document).on('click', '.input-remove-row', function () {
+        var tr = $(this).closest('tr');
+        tr.fadeOut(200, function () {
+            tr.remove();
+            calc_total()
+        });
+    });
+
+    $(function () {
+        $('.preview-add-button').click(function () {
+            var form_data = {};
+            form_data["concept"] = $('.payment-form input[name="concept"]').val();
+            form_data["description"] = $('.payment-form input[name="description"]').val();
+            form_data["amount"] = parseFloat($('.payment-form input[name="amount"]').val()).toFixed(2);
+            form_data["status"] = $('.payment-form #status option:selected').text();
+            form_data["date"] = $('.payment-form input[name="date"]').val();
+            form_data["remove-row"] = '<span class="glyphicon glyphicon-remove"></span>';
+            var row = $('<tr></tr>');
+            $.each(form_data, function (type, value) {
+                $('<td class="input-' + type + '"></td>').html(value).appendTo(row);
+            });
+            $('.preview-table > tbody:last').append(row);
+            calc_total();
+        });
+    });
+
+    document.getElementById('book').onclick = function () {
+        $("#buy1").modal("show");
+        $("#buy1").css('visibility', 'hidden');
+        $("#judul").text("Favourite Bali Full Day Bedugul With Tanah Lot & Nusa Dua Tour");
+        $("#load").css('display', 'block');
+        var delay = 710;
+        setTimeout(function () {
+            $("#buy1").css('visibility', 'visible');
+            $("#load").css('display', 'none');
+        }, delay);
+    }
+    document.getElementById('book2').onclick = function () {
+        $("#buy1").modal("show");
+        $("#buy1").css('visibility', 'hidden');
+        $("#judul").text("Favourite Bali Full Day Bedugul With Tanah Lot & Nusa Dua Tour");
+        $("#load").css('display', 'block');
+        var delay = 710;
+        setTimeout(function () {
+            $("#buy1").css('visibility', 'visible');
+            $("#load").css('display', 'none');
+        }, delay);
+    }
+    document.getElementById('book3').onclick = function () {
+        $("#buy1").modal("show");
+        $("#buy1").css('visibility', 'hidden');
+        $("#judul").text("Favourite Bali Full Day Bedugul - Nusa Dua - Kintamani Tour");
+        $("#load").css('display', 'block');
+        var delay = 710;
+        setTimeout(function () {
+            $("#buy1").css('visibility', 'visible');
+            $("#load").css('display', 'none');
+        }, delay);
+    }
+    document.getElementById('book4').onclick = function () {
+        $("#buy1").modal("show");
+        $("#buy1").css('visibility', 'hidden');
+        $("#judul").text("Experience All Inclusive Package At Club Med Bali");
+        $("#load").css('display', 'block');
+        var delay = 710;
+        setTimeout(function () {
+            $("#buy1").css('visibility', 'visible');
+            $("#load").css('display', 'none');
+        }, delay);
+    }
+    document.getElementById('book5').onclick = function () {
+        $("#buy1").modal("show");
+        $("#buy1").css('visibility', 'hidden');
+        $("#judul").text("Favourite Bali Full Day Bedugul - Nusa Dua - Kintamani Tour With Bali Safari & Marine Park");
+        $("#load").css('display', 'block');
+        var delay = 710;
+        setTimeout(function () {
+            $("#buy1").css('visibility', 'visible');
+            $("#load").css('display', 'none');
+        }, delay);
+    }
+    document.getElementById('book6').onclick = function () {
+        $("#buy1").modal("show");
+        $("#buy1").css('visibility', 'hidden');
+        $("#judul").text("RIMBA Jimbaran Bali by AYANA");
+        $("#load").css('display', 'block');
+        var delay = 710;
+        setTimeout(function () {
+            $("#buy1").css('visibility', 'visible');
+            $("#load").css('display', 'none');
+        }, delay);
+    }
+    document.getElementById('book7').onclick = function () {
+        $("#buy1").modal("show");
+        $("#buy1").css('visibility', 'hidden');
+        $("#judul").text("The Lokha Ubud Resort, Villas and Spa");
+        $("#load").css('display', 'block');
+        var delay = 710;
+        setTimeout(function () {
+            $("#buy1").css('visibility', 'visible');
+            $("#load").css('display', 'none');
+        }, delay);
+    }
+    document.getElementById('book8').onclick = function () {
+        $("#buy1").modal("show");
+        $("#buy1").css('visibility', 'hidden');
+        $("#judul").text("Kamandalu Ubud Honeymoon Package Ubud Chalet");
+        $("#load").css('display', 'block');
+        var delay = 710;
+        setTimeout(function () {
+            $("#buy1").css('visibility', 'visible');
+            $("#load").css('display', 'none');
+        }, delay);
+    }
+</script>

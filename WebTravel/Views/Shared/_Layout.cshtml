@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link rel="stylesheet" href="~/content/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <style>
+        a.navbar-brand.navbar-link{
+  margin-top:7px;
+}
+
+ul.nav.navbar-nav.navbar-right{
+  margin-top:12px;
+  margin-right:18px;
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover{
+  color:#363535;
+  background-color:#e7e7e7;
+}
+
+.navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover{
+  color:#dad9d9;
+  background-color:Highlight;
+}
+
+.navbar-default .navbar-nav > li > a{
+  color:#b8b6b6;
+}
+
+.navbar-brand, .navbar-nav > li > a{
+  text-shadow:0 1px 0 rgba(255,255,255,.25);
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .open > a{
+  background-repeat:repeat-x;
+  -webkit-box-shadow:inset 0 3px 9px rgba(0,0,0,.075);
+  background:rgba(255, 255, 255, 0.3);
+}
+
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover{
+  background-color:#ddd;
+  background:white;
+}
+
+button.navbar-toggle.collapsed{
+  margin-top:16px;
+  margin-right:52px;
+}
+
+nav.navbar.navbar-default{
+  height: 100px;
+  background: none;
+  box-shadow: none;
+  border: none;
+  padding-top: 25px;
+  padding-left: 30px;
+  padding-right: 75px;
+}
+
+.navbar-header a.navbar-brand img{
+  height: 30px;
+  margin-top: -4px;
+}
+
+.navbar-nav > li > a{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-static-top">
+        <div class="container" id="navbar">
+            <div class="navbar-header">
+                @*<a href="#" class="navbar-brand navbar-link"><img src="/Image/logo.png"></a>*@
+                <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+            </div>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="nav navbar-nav navbar-right" style="display:inline">
+                    <li role="presentation"><a href="">HOME</a></li>
+                    <li role="presentation"><a href="#news">BLOG</a></li>
+                    @*<li role="presentation"><a href="#gallery">GALLERY</a></li>*@
+                    <li role="presentation" class="dropdown" id="first-link">
+                        <a data-toggle="dropdown" href="#">LIST <span class="caret"></span></a>
+                        <ul class="dropdown-menu" style="background: linear-gradient(to bottom right, #33ccff 0%, #ffffff 100%);" id="ddp">
+                            @*<li><a href="/fItem/IndexItem" style="font-size: 14px; color: white;"><span class="glyphicon glyphicon-list"></span>  Consumable Items</a></li>
+                            <li><a href="/fConsumableReport/ConsumableReport"><span class="glyphicon glyphicon-list"></span>  Consumable Report</a></li>
+                            <li><a href="/fAddItem/AddItemindex"><span class="glyphicon glyphicon-list"></span>  Stock In Consumable Items</a></li>
+                            <li><a href="/fInventory/IndexInventory"><span class="glyphicon glyphicon-list"></span>  Stock Out Consumable Items</a></li>*@
+                            <li role="presentation"><a href="">Bali</a></li>
+                            <li role="presentation"><a href="">Medan</a></li>
+                            <li role="presentation"><a href="">Yogyakarta</a></li>
+                            <li role="presentation"><a href="">Mandalika</a></li>
+                            <li role="presentation"><a href="">Labuan Bajo</a></li>
+                            <li role="presentation"><a href="">Belitung</a></li>
+                            <li role="presentation"><a href="">Sumba</a></li>
+                            <li role="presentation"><a href="">Raja Ampat</a></li>
+                        </ul>
+                    </li>
+                    <li role="presentation"><a href="#about">ABOUT</a></li>
+                    <li role="presentation"><a href="#"><i class="glyphicon glyphicon-search"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container body-content">
+        @RenderBody()
+   
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
